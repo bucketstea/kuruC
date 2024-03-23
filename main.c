@@ -2,10 +2,8 @@
 
 int main(void){
 	int value;
-	int i;
-	int j;
-	int i1;
-	int i2;
+	int i,j,i1,i2;
+	double pi = 3.14159;
 	value = 100;
 	i = 40;
 	j = 13;
@@ -21,9 +19,13 @@ int main(void){
 	printf("i=%d\n", i);
 	printf("%d ÷ %d = %d 余り%d\n", i, j, i1, i2);
 	i1 += i2;
-	printf("%d\n", i1);
+	printf("%03d\n", i1);
 	i1++;
-	printf("%d\n", i1);
+	printf("%03d\n", i1);
+	i1 = 360 * 1.05;
+	printf("%03d\n", (int)i1);
+	printf("%6.2f\n", pi);
 	printf("end\n");
+	/*--------------------------*/
 	return 0;
 }
