@@ -20,6 +20,10 @@ int main(void){
 	printf("%f\n", 10.0 / 3.0);
 	printf("i=%d\n", i);
 	printf("%d ÷ %d = %d 余り%d\n", i, j, i1, i2);
+	i1 += i2;
+	printf("%d\n", i1);
+	i1++;
+	printf("%d\n", i1);
 	printf("end\n");
 	return 0;
 }
