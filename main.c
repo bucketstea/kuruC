@@ -4,6 +4,15 @@ int main(void){
 	int value;
 	int i,j,i1,i2;
 	double pi = 3.14159;
+/*--▼test1----------------------------*/
+	int softdrink;
+	int milk;
+	int total;
+	int recievePayment;
+	double taxRate;
+	int change;
+/*--▲test1----------------------------*/
+
 	value = 100;
 	i = 40;
 	j = 13;
@@ -25,6 +34,14 @@ int main(void){
 	i1 = 360 * 1.05;
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
+	printf("------------test----------\n");
+	softdrink = 198;
+	milk =138;
+	taxRate = 0.05;
+	total = (softdrink + milk * 2) * (taxRate + 1.0);
+	recievePayment = 1000;
+	change = recievePayment - (int)total;
+	printf("%d\n", change);
 	printf("end\n");
 	/*--------------------------*/
 	return 0;
