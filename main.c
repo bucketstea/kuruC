@@ -43,6 +43,6 @@ int main(void){
 	change = recievePayment - (int)total;
 	printf("%d\n", change);
 	printf("end\n");
-	/*-end------------------------*/
+	/*--end-----------------------*/
 	return 0;
 }
