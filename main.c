@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 
 int main(void){
 	int value;
@@ -12,7 +13,7 @@ int main(void){
 	double taxRate;
 	int change;
 /*--▲test1----------------------------*/
-
+/*--▼cap5-----------------------------*/
 	value = 100;
 	i = 40;
 	j = 13;
@@ -43,6 +44,8 @@ int main(void){
 	change = recievePayment - (int)total;
 	printf("%d\n", change);
 	printf("end\n");
-	/*--end-----------------------*/
+	/*--cap5.end-----------------------*/
+    scanf("%d", &input1);
+    printf("%d\n", input1);
 	return 0;
 }
