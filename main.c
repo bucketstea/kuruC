@@ -46,6 +46,6 @@ int main(void){
 	printf("end\n");
 	/*--cap5.end-----------------------*/
     scanf("%d", &input1);
-    printf("%d\n", input1);
+    printf("output=%d\n", input1);
 	return 0;
 }
