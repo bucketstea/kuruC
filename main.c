@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 int main(void){
 	int value;
@@ -13,7 +13,6 @@ int main(void){
 	double taxRate;
 	int change;
 /*--▲test1----------------------------*/
-/*--▼cap5-----------------------------*/
 	value = 100;
 	i = 40;
 	j = 13;
@@ -35,7 +34,8 @@ int main(void){
 	i1 = 360 * 1.05;
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
-	printf("------------test----------\n");
+	/*--▼cap5-----------------------------*/
+	printf("------------cap5----------\n");
 	softdrink = 198;
 	milk =138;
 	taxRate = 0.05;
@@ -45,7 +45,18 @@ int main(void){
 	printf("%d\n", change);
 	printf("end\n");
 	/*--cap5.end-----------------------*/
+	/*--▼cap6-------------------------*/
+	printf("------------cap6----------\n");
+    printf("整数を入力してください:");
     scanf("%d", &input1);
-    printf("output=%d\n", input1);
+    printf("output1=%d\n", input1);
+    printf("実数を入力してください:");
+    scanf("%lf", &input2);
+    printf("output2=%.2f\n", input2);
+    printf("シグマ計算をします。最小値、最大値の順に半角スペースで区切って入力してください。:");
+    scanf("%d%d", &sigInputMin, &sigInputMax);
+    sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
+    printf("%d〜%dの合計は%dです！\n", sigInputMin, sigInputMax, sigOutput);
+    /*--cap6.end-----------------------*/
 	return 0;
 }
