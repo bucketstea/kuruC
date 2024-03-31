@@ -57,6 +57,6 @@ int main(void){
 	scanf("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
 	printf("%d〜%dの合計は%dです！\n", sigInputMin, sigInputMax, sigOutput);
-	/*--cap6.end-----------------------*/
+	/*--cap6-end-----------------------*/
 	return 0;
 }
