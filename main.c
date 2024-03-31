@@ -47,16 +47,16 @@ int main(void){
 	/*--cap5.end-----------------------*/
 	/*--▼cap6-------------------------*/
 	printf("------------cap6----------\n");
-    printf("整数を入力してください:");
-    scanf("%d", &input1);
-    printf("output1=%d\n", input1);
-    printf("実数を入力してください:");
-    scanf("%lf", &input2);
-    printf("output2=%.2f\n", input2);
-    printf("シグマ計算をします。最小値、最大値の順に半角スペースで区切って入力してください。:");
-    scanf("%d%d", &sigInputMin, &sigInputMax);
-    sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
-    printf("%d〜%dの合計は%dです！\n", sigInputMin, sigInputMax, sigOutput);
-    /*--cap6.end-----------------------*/
+	printf("整数を入力してください:");
+	scanf("%d", &input1);
+	printf("output1=%d\n", input1);
+	printf("実数を入力してください:");
+	scanf("%lf", &input2);
+	printf("output2=%.2f\n", input2);
+	printf("シグマ計算をします。最小値、最大値の順に半角スペースで区切って入力してください。:");
+	scanf("%d%d", &sigInputMin, &sigInputMax);
+	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
+	printf("%d〜%dの合計は%dです！\n", sigInputMin, sigInputMax, sigOutput);
+	/*--cap6.end-----------------------*/
 	return 0;
 }
