@@ -28,7 +28,7 @@ int main(void){
 	printf("%f\n", 10.0 - 3.0);
 	printf("%f\n", 10.0 * 3.0);
 	printf("%f\n", 10.0 / 3.0);
-	printf("i=%d\n", i);
+	printf("i = %d\n", i);
 	printf("%d devided by %d is %d surplus %d\n", i, j, i1, i2);
 	i1 += i2;
 	printf("%03d\n", i1);
@@ -67,10 +67,10 @@ int main(void){
 	discount05 = (int)(listPrice * 0.5);
 	discount02 = (int)(listPrice * 0.2);
 	printf("List Price is %d\n", listPrice);
-	printf("10% off is %d\n", discount09);
-	printf("30% off is %d\n", discount07);
+	printf(".10 off is %d\n", discount09);
+	printf(".30 off is %d\n", discount07);
 	printf("The harf price is %d\n", discount05);
-	printf("80% off is %d\n", discount02);
+	printf(".80 off is %d\n", discount02);
 	/*--cap6-end-----------------------*/
 	return 0;
 }
