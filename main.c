@@ -48,17 +48,17 @@ int main(void){
 	/*--▼cap6-------------------------*/
 	printf("------------cap6----------\n");
 	printf("整数を入力してください:");
-	scanf_s("%d", &input1);
+	scanf("%d", &input1);
 	printf("output1=%d\n", input1);
 	printf("実数を入力してください:");
-	scanf_s("%lf", &input2);
+	scanf("%lf", &input2);
 	printf("output2=%.2f\n", input2);
 	printf("シグマ計算をします。最小値、最大値の順に半角スペースで区切って入力してください。:");
-	scanf_s("%d%d", &sigInputMin, &sigInputMax);
+	scanf("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
 	printf("%d〜%dの合計は%dです！！！\n", sigInputMin, sigInputMax, sigOutput);
 	printf(" 定価を入力してください:");
-	scanf_s("%d", &listPrice);
+	scanf("%d", &listPrice);
 	discount09 = (int)(listPrice * 0.9);
 	discount07 = (int)(listPrice * 0.7);
 	discount05 = (int)(listPrice * 0.5);
