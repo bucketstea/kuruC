@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "main.h"
+#ifdef _WIN32
+#define scanf scanf_s
+#endif
 
 int main(void){
 	int value;
@@ -19,14 +22,14 @@ int main(void){
 	i1 = i/j;
 	i2 = i%j;
 	printf("hello,\tword\n");
-	printf("%d人+%d人=%d人\n", 123, 77, 123+77);
+	printf("%d people + %d people = %d people\n", 123, 77, 123+77);
 	printf("%d\n", (1+value) * value / 2);
 	printf("%f\n", 10.0 + 3.0);
 	printf("%f\n", 10.0 - 3.0);
 	printf("%f\n", 10.0 * 3.0);
 	printf("%f\n", 10.0 / 3.0);
 	printf("i=%d\n", i);
-	printf("%d ÷ %d = %d 余り%d\n", i, j, i1, i2);
+	printf("%d devided by %d is %d surplus %d\n", i, j, i1, i2);
 	i1 += i2;
 	printf("%03d\n", i1);
 	i1++;
@@ -47,27 +50,27 @@ int main(void){
 	/*--cap5.end-----------------------*/
 	/*--▼cap6-------------------------*/
 	printf("------------cap6----------\n");
-	printf("整数を入力してください:");
+	printf("Enter a integer:");
 	scanf("%d", &input1);
 	printf("output1=%d\n", input1);
-	printf("実数を入力してください:");
+	printf("Enter a real number may include a decimal:");
 	scanf("%lf", &input2);
-	printf("output2=%.2f\n", input2);
-	printf("シグマ計算をします。最小値、最大値の順に半角スペースで区切って入力してください。:");
+	printf("output2 is %.2f\n", input2);
+	printf("This executes a sigma calculation. Enter the Min and Max values separated by a space:");
 	scanf("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
-	printf("%d〜%dの合計は%dです！！！\n", sigInputMin, sigInputMax, sigOutput);
-	printf(" 定価を入力してください:");
+	printf("The sum of %d to %d is %d!\n", sigInputMin, sigInputMax, sigOutput);
+	printf(" Enter a list price:");
 	scanf("%d", &listPrice);
 	discount09 = (int)(listPrice * 0.9);
 	discount07 = (int)(listPrice * 0.7);
 	discount05 = (int)(listPrice * 0.5);
 	discount02 = (int)(listPrice * 0.2);
-	printf("定価＝%d\n", listPrice);
-	printf("1割引＝%d\n", discount09);
-	printf("3割引＝%d\n", discount07);
-	printf("5割引＝%d\n", discount05);
-	printf("8割引＝%d\n", discount02);
+	printf("List Price is %d\n", listPrice);
+	printf("10% off is %d\n", discount09);
+	printf("30% off is %d\n", discount07);
+	printf("The harf price is %d\n", discount05);
+	printf("80% off is %d\n", discount02);
 	/*--cap6-end-----------------------*/
 	return 0;
 }
