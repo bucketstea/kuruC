@@ -5,14 +5,14 @@ int main(void){
 	int value;
 	int i,j,i1,i2;
 	double pi = 3.14159;
-/*--▼test1----------------------------*/
+	/*--▼test1----------------------------*/
 	int softdrink;
 	int milk;
 	int total;
 	int recievePayment;
 	double taxRate;
 	int change;
-/*--▲test1----------------------------*/
+	/*--▲test1----------------------------*/
 	value = 100;
 	i = 40;
 	j = 13;
@@ -57,6 +57,17 @@ int main(void){
 	scanf_s("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
 	printf("%d〜%dの合計は%dです！！！\n", sigInputMin, sigInputMax, sigOutput);
+	printf(" 定価を入力してください:");
+	scanf_s("%d", &listPrice);
+	discount09 = (int)(listPrice * 0.9);
+	discount07 = (int)(listPrice * 0.7);
+	discount05 = (int)(listPrice * 0.5);
+	discount02 = (int)(listPrice * 0.2);
+	printf("定価＝%d\n", listPrice);
+	printf("1割引＝%d\n", discount09);
+	printf("3割引＝%d\n", discount07);
+	printf("5割引＝%d\n", discount05);
+	printf("8割引＝%d\n", discount02);
 	/*--cap6-end-----------------------*/
 	return 0;
 }
