@@ -1,3 +1,9 @@
+int softdrink;
+int milk;
+int total;
+int recievePayment;
+double taxRate;
+int change;
 int input1;
 double input2;
 int sigInputMin, sigInputMax, sigOutput;
@@ -6,3 +12,4 @@ long discount09;
 long discount07;
 long discount05;
 long discount02;
+long discount500;
