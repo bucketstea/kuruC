@@ -10,8 +10,8 @@ int main(void){
 	int i = 40,j = 13, i1 = i/j, i2 = i%j;
 	double pi = 3.14159;
 	
-	/*--▼test1----------------------------*/
-	printf("initial test...");
+	/*--▼ini-test----------------------------*/
+	printf("initial test...\n");
 	printf("hello,\tword\n");
 	printf("%d people + %d people = %d people\n", 123, 77, 123+77);
 	printf("%d\n", (1+value) * value / 2);
@@ -28,7 +28,7 @@ int main(void){
 	i1 = 360 * 1.05;
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
-	/*--▲test1----------------------------*/
+	/*--▲ini-test----------------------------*/
 	
 	/*--▼cap5-----------------------------*/
 	printf("------------cap5----------\n");
