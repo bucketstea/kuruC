@@ -5,22 +5,10 @@
 #endif
 
 int main(void){
-	int value;
-	int i,j,i1,i2;
+	int value = 100;
+	int i = 40,j = 13, i1 = i/j, i2 = i%j;
 	double pi = 3.14159;
 	/*--▼test1----------------------------*/
-	int softdrink;
-	int milk;
-	int total;
-	int recievePayment;
-	double taxRate;
-	int change;
-	/*--▲test1----------------------------*/
-	value = 100;
-	i = 40;
-	j = 13;
-	i1 = i/j;
-	i2 = i%j;
 	printf("hello,\tword\n");
 	printf("%d people + %d people = %d people\n", 123, 77, 123+77);
 	printf("%d\n", (1+value) * value / 2);
@@ -37,6 +25,7 @@ int main(void){
 	i1 = 360 * 1.05;
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
+	/*--▲test1----------------------------*/
 	/*--▼cap5-----------------------------*/
 	printf("------------cap5----------\n");
 	softdrink = 198;
@@ -49,13 +38,15 @@ int main(void){
 	printf("end\n");
 	/*--cap5.end-----------------------*/
 	/*--▼cap6-------------------------*/
+	/*
 	printf("------------cap6----------\n");
 	printf("Enter a integer:");
 	scanf("%d", &input1);
-	printf("output1=%d\n", input1);
+	printf("output1 is %d\n", input1);
 	printf("Enter a real number may include a decimal:");
 	scanf("%lf", &input2);
 	printf("output2 is %.2f\n", input2);
+	*/
 	printf("This executes a sigma calculation. Enter the Min and Max values separated by a space:");
 	scanf("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
@@ -72,5 +63,9 @@ int main(void){
 	printf("The harf price is %d\n", discount05);
 	printf(".80 off is %d\n", discount02);
 	/*--cap6-end-----------------------*/
+	/*--cap7---------------------------*/
+	
+	
+	/*--cap7-end-----------------------*/
 	return 0;
 }

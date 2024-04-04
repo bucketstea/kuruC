@@ -1,3 +1,9 @@
+int softdrink;
+int milk;
+int total;
+int recievePayment;
+double taxRate;
+int change;
 int input1;
 double input2;
 int sigInputMin, sigInputMax, sigOutput;
