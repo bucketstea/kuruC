@@ -5,10 +5,13 @@
 #endif
 
 int main(void){
+	//変数宣言
 	int value = 100;
 	int i = 40,j = 13, i1 = i/j, i2 = i%j;
 	double pi = 3.14159;
+	
 	/*--▼test1----------------------------*/
+	printf("initial test...");
 	printf("hello,\tword\n");
 	printf("%d people + %d people = %d people\n", 123, 77, 123+77);
 	printf("%d\n", (1+value) * value / 2);
@@ -26,6 +29,7 @@ int main(void){
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
 	/*--▲test1----------------------------*/
+	
 	/*--▼cap5-----------------------------*/
 	printf("------------cap5----------\n");
 	softdrink = 198;
@@ -37,9 +41,10 @@ int main(void){
 	printf("%d\n", change);
 	printf("end\n");
 	/*--cap5.end-----------------------*/
+	
 	/*--▼cap6-------------------------*/
-	/*
 	printf("------------cap6----------\n");
+	/*
 	printf("Enter a integer:");
 	scanf("%d", &input1);
 	printf("output1 is %d\n", input1);
@@ -57,15 +62,27 @@ int main(void){
 	discount07 = (int)(listPrice * 0.7);
 	discount05 = (int)(listPrice * 0.5);
 	discount02 = (int)(listPrice * 0.2);
+	discount500 = (int)(listPrice - 500);
 	printf("List Price is %d\n", listPrice);
 	printf(".10 off is %d\n", discount09);
 	printf(".30 off is %d\n", discount07);
 	printf("The harf price is %d\n", discount05);
 	printf(".80 off is %d\n", discount02);
 	/*--cap6-end-----------------------*/
+	
 	/*--cap7---------------------------*/
-	
-	
+	printf("------------cap7----------\n");
+	if (!(!(discount500)) && discount500 >= 0) {
+		printf("discount500 is %d yen!\n", discount500);
+	}
+	else if (discount500 < 0) {
+		printf("discount500 is unavailable... it's %d yen.\n", discount500);
+		discount500 = 0;
+		printf("discount500 is to be 0 yen.\n");
+	}
+	else {
+		printf("discount500 is free!!\n");
+	}
 	/*--cap7-end-----------------------*/
 	return 0;
 }

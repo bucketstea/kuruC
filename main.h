@@ -12,3 +12,4 @@ long discount09;
 long discount07;
 long discount05;
 long discount02;
+long discount500;
