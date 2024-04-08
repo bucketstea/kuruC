@@ -69,7 +69,6 @@ int main(void){
 	printf("The harf price is %d\n", discount05);
 	printf(".80 off is %d\n", discount02);
 	/*--cap6-end-----------------------*/
-	
 	/*--cap7---------------------------*/
 	printf("------------cap7----------\n");
 	if (!(!(discount500)) && discount500 >= 0) {
@@ -84,16 +83,38 @@ int main(void){
 		printf("discount500 is free!!\n");
 	}
 	printf("Enter year(AD):");
-	scanf("%d", &inpAD);
-	if (inpAD % 4 == 0) {
+	scanf("%d", &inputAD);
+
+	if (inputAD % 4 == 0) {
 		printf("summer\n");
 	}
-	else if (inpAD % 4 == 2) {
+	else if (inputAD % 4 == 2) {
 		printf("winter\n");
 	}
 	else {
-		printf("non");
+		printf("non\n");
 	}
 	/*--cap7-end-----------------------*/
+	/*--cap8---------------------------*/
+	printf("Enter a Nomber:");
+	scanf("%d", &inputNo);
+
+	switch (inputNo) {
+	case 1:
+		printf("Nobita\n");
+		break;
+	case 2:
+		printf("Sizuka\n");
+		break;
+	case 3:
+		printf("Takeshi\n");
+		break;
+	case 4:
+		printf("SuneO\n");
+		break;
+	default:
+		printf("nobody!\n");
+		break;
+	}
 	return 0;
 }
