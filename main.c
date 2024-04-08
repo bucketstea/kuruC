@@ -28,8 +28,8 @@ int main(void){
 	i1 = 360 * 1.05;
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
-	/*--▲ini-test----------------------------*/
 	
+	/*--▲ini-test----------------------------*/
 	/*--▼cap5-----------------------------*/
 	printf("------------cap5----------\n");
 	softdrink = 198;
@@ -40,8 +40,8 @@ int main(void){
 	change = recievePayment - (int)total;
 	printf("%d\n", change);
 	printf("end\n");
+
 	/*--cap5.end-----------------------*/
-	
 	/*--▼cap6-------------------------*/
 	printf("------------cap6----------\n");
 	/*
@@ -68,6 +68,7 @@ int main(void){
 	printf(".30 off is %d\n", discount07);
 	printf("The harf price is %d\n", discount05);
 	printf(".80 off is %d\n", discount02);
+	
 	/*--cap6-end-----------------------*/
 	/*--cap7---------------------------*/
 	printf("------------cap7----------\n");
@@ -94,8 +95,10 @@ int main(void){
 	else {
 		printf("non\n");
 	}
+	
 	/*--cap7-end-----------------------*/
 	/*--cap8---------------------------*/
+	printf("------------cap8----------\n");
 	printf("Enter a Nomber:");
 	scanf("%d", &inputNo);
 
@@ -116,5 +119,51 @@ int main(void){
 		printf("nobody!\n");
 		break;
 	}
+	
+	printf("Enter a Month:");
+	scanf("%d", &inputMM);
+	
+	switch (inputMM) {
+	case 1:
+		printf("Mutsuki\n");
+		break;
+	case 2:
+		printf("Kisaragi\n");
+		break;
+	case 3:
+		printf("Yayoi\n");
+		break;
+	case 4:
+		printf("Uzuki\n");
+		break;
+	case 5:
+		printf("Satsuki\n");
+		break;
+	case 6:
+		printf("Minatsuki\n");
+		break;
+	case 7:
+		printf("Fumitsuki\n");
+		break;
+	case 8:
+		printf("Hazuki\n");
+		break;
+	case 9:
+		printf("Nagatsuki\n");
+		break;
+	case 10:
+		printf("Kannazuki\n");
+		break;
+	case 11:
+		printf("Shimotsuki\n");
+		break;
+	case 12:
+		printf("Shiwasu\n");
+		break;
+	default:
+		printf("non!\n");
+		break;
+	}
+
 	return 0;
 }

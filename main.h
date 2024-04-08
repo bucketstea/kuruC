@@ -15,3 +15,4 @@ long discount02;
 long discount500;
 int inputAD;
 int inputNo;
+int inputMM;
