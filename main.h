@@ -13,4 +13,6 @@ long discount07;
 long discount05;
 long discount02;
 long discount500;
-int inpAD;
+int inputAD;
+int inputNo;
+int inputMM;
