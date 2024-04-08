@@ -83,6 +83,17 @@ int main(void){
 	else {
 		printf("discount500 is free!!\n");
 	}
+	printf("Enter year(AD):");
+	scanf("%d", &inpAD);
+	if (inpAD % 4 == 0) {
+		printf("summer\n");
+	}
+	else if (inpAD % 4 == 2) {
+		printf("winter\n");
+	}
+	else {
+		printf("non");
+	}
 	/*--cap7-end-----------------------*/
 	return 0;
 }
