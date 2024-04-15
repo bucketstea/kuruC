@@ -16,3 +16,4 @@ long discount500;
 int inputAD;
 int inputNo;
 int inputMM;
+int i,j;

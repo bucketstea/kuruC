@@ -5,12 +5,14 @@
 #endif
 
 int main(void){
+	/*--▼cap5-----------------------------
+	printf("------------cap5----------\n");
+	
 	//変数宣言
 	int value = 100;
-	int i = 40,j = 13, i1 = i/j, i2 = i%j;
+	int i = 40, j = 13, i1 = i/j, i2 = i%j;
 	double pi = 3.14159;
 	
-	/*--▼ini-test----------------------------*/
 	printf("initial test...\n");
 	printf("hello,\tword\n");
 	printf("%d people + %d people = %d people\n", 123, 77, 123+77);
@@ -29,9 +31,6 @@ int main(void){
 	printf("%03d\n", (int)i1);
 	printf("%6.2f\n", pi);
 	
-	/*--▲ini-test----------------------------*/
-	/*--▼cap5-----------------------------*/
-	printf("------------cap5----------\n");
 	softdrink = 198;
 	milk =138;
 	taxRate = 0.05;
@@ -42,16 +41,16 @@ int main(void){
 	printf("end\n");
 
 	/*--cap5.end-----------------------*/
-	/*--▼cap6-------------------------*/
+	/*--▼cap6-------------------------
 	printf("------------cap6----------\n");
-	/*
+	
 	printf("Enter a integer:");
 	scanf("%d", &input1);
 	printf("output1 is %d\n", input1);
 	printf("Enter a real number may include a decimal:");
 	scanf("%lf", &input2);
 	printf("output2 is %.2f\n", input2);
-	*/
+
 	printf("This executes a sigma calculation. Enter the Min and Max values separated by a space:");
 	scanf("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
@@ -70,7 +69,7 @@ int main(void){
 	printf(".80 off is %d\n", discount02);
 	
 	/*--cap6-end-----------------------*/
-	/*--cap7---------------------------*/
+	/*--cap7---------------------------
 	printf("------------cap7----------\n");
 	if (!(!(discount500)) && discount500 >= 0) {
 		printf("discount500 is %d yen!\n", discount500);
@@ -165,5 +164,16 @@ int main(void){
 		break;
 	}
 
+	/*--cap9---------------------------*/
+	printf("------------cap9----------\n");
+
+	for(i = 1; i <= 9; i++){
+		for (j = 1; j <= 9; j++){
+			printf("%2d_", i * j);
+		}
+		printf("\n");
+	}
+
+	/*--cap9-end-----------------------*/
 	return 0;
 }
