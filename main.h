@@ -17,3 +17,4 @@ int inputAD;
 int inputNo;
 int inputMM;
 int i,j;
+int money = 1, month = 1, testScore;

@@ -175,5 +175,25 @@ int main(void){
 	}
 
 	/*--cap9-end-----------------------*/
+	/*--cap10--------------------------*/
+	printf("------------cap10---------\n");
+
+	while (money < 1000000) {
+		printf("%d yen\n", money);
+		money *= 2;
+		month++;
+	}
+	printf("Exceeded 10,000yen. It's %d yen at %d th month.\n", money, month);
+	
+	do {
+		if (testScore < 0 || testScore > 100) {
+			printf("The test score you input is wrong.\nRe: ");
+		}
+		printf("Enter the test score:");
+		scanf("%d", &testScore);
+	} while (testScore < 0 	|| testScore > 100);
+	printf("The test score you input is %d.", testScore);
+	/*--cap10-end----------------------*/
+
 	return 0;
 }
