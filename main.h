@@ -14,6 +14,7 @@ long discount05;
 long discount02;
 long discount500;
 int inputAD;
+int heldOlympic;
 int inputNo;
 int inputMM;
 int i,j;
