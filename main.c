@@ -4,6 +4,21 @@
 #define scanf scanf_s
 #endif
 
+/*********************
+***プロトタイプ宣言***
+*********************/
+int calPrice(void);
+int olympic(int);
+int whois(void);
+int japaneseMonthName(void);
+int tableKuku(void);
+int whenExceed(void);
+int testScoreCheck(void);
+int sum(int, int);
+
+/*********************
+***main関数***********
+*********************/
 int main(void){
 	/*--▼cap5-----------------------------
 	printf("------------cap5----------\n");
@@ -55,6 +70,57 @@ int main(void){
 	scanf("%d%d", &sigInputMin, &sigInputMax);
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
 	printf("The sum of %d to %d is %d!\n", sigInputMin, sigInputMax, sigOutput);
+	
+	/*--cap6-end-----------------------*/
+	/*--cap7---------------------------*/
+	printf("------------cap7----------\n");
+	calPrice();
+	
+	printf("Enter year(AD):");
+	scanf("%d", &inputAD);
+
+	switch (olympic(inputAD)) {
+	case 1:
+		printf("summer\n");
+		break;
+	case 2:
+		printf("winter\n");
+		break;
+	case 3:
+		printf("non\n");
+		break;
+	}
+
+	/*--cap7-end-----------------------*/
+	/*--cap8---------------------------*/
+	printf("------------cap8----------\n");
+	whois();
+	japaneseMonthName();
+
+	/*--cap8-end-----------------------*/
+	/*--cap9---------------------------*/
+	printf("------------cap9----------\n");
+	tableKuku();
+
+	/*--cap9-end-----------------------*/
+	/*--cap10--------------------------*/
+	printf("------------cap10---------\n");
+	whenExceed();
+	testScoreCheck();
+
+	/*--cap10-end----------------------*/
+	/*--cap11--------------------------*/
+	printf("This executes a sigma calculation. Enter the Min and Max values separated by a space:");
+	scanf("%d%d", &sigInputMin, &sigInputMax);
+	sigOutput = sum(sigInputMin, sigInputMax);
+	printf("The sum of %d to %d is %d!\n", sigInputMin, sigInputMax, sigOutput);
+
+	/*--cap11-end----------------------*/
+
+	return 0;
+}
+
+int calPrice(void) {
 	printf(" Enter a list price:");
 	scanf("%d", &listPrice);
 	discount09 = (int)(listPrice * 0.9);
@@ -67,10 +133,7 @@ int main(void){
 	printf(".30 off is %d\n", discount07);
 	printf("The harf price is %d\n", discount05);
 	printf(".80 off is %d\n", discount02);
-	
-	/*--cap6-end-----------------------*/
-	/*--cap7---------------------------
-	printf("------------cap7----------\n");
+
 	if (!(!(discount500)) && discount500 >= 0) {
 		printf("discount500 is %d yen!\n", discount500);
 	}
@@ -82,22 +145,23 @@ int main(void){
 	else {
 		printf("discount500 is free!!\n");
 	}
-	printf("Enter year(AD):");
-	scanf("%d", &inputAD);
+	return 0;
+}
 
+int olympic(int inputAD) {
 	if (inputAD % 4 == 0) {
-		printf("summer\n");
+		heldOlympic = 1;
 	}
 	else if (inputAD % 4 == 2) {
-		printf("winter\n");
+		heldOlympic = 2;
 	}
 	else {
-		printf("non\n");
+		heldOlympic = 0;
 	}
-	
-	/*--cap7-end-----------------------*/
-	/*--cap8---------------------------*/
-	printf("------------cap8----------\n");
+	return heldOlympic;
+}
+
+int whois(void) {
 	printf("Enter a Nomber:");
 	scanf("%d", &inputNo);
 
@@ -118,10 +182,13 @@ int main(void){
 		printf("nobody!\n");
 		break;
 	}
-	
+	return 0;
+}
+
+int japaneseMonthName(void){
 	printf("Enter a Month:");
 	scanf("%d", &inputMM);
-	
+
 	switch (inputMM) {
 	case 1:
 		printf("Mutsuki\n");
@@ -163,37 +230,42 @@ int main(void){
 		printf("non!\n");
 		break;
 	}
+	return 0;
+}
 
-	/*--cap9---------------------------*/
-	printf("------------cap9----------\n");
-
-	for(i = 1; i <= 9; i++){
-		for (j = 1; j <= 9; j++){
+int tableKuku(void) {
+	for (i = 1; i <= 9; i++) {
+		for (j = 1; j <= 9; j++) {
 			printf("%2d_", i * j);
 		}
 		printf("\n");
 	}
+	return 0;
+}
 
-	/*--cap9-end-----------------------*/
-	/*--cap10--------------------------*/
-	printf("------------cap10---------\n");
-
+int whenExceed(void) {
 	while (money < 1000000) {
 		printf("%d yen\n", money);
 		money *= 2;
 		month++;
 	}
 	printf("Exceeded 10,000yen. It's %d yen at %d th month.\n", money, month);
-	
+	return 0;
+}
+
+int testScoreCheck(void){
 	do {
 		if (testScore < 0 || testScore > 100) {
 			printf("The test score you input is wrong.\nRe: ");
 		}
 		printf("Enter the test score:");
 		scanf("%d", &testScore);
-	} while (testScore < 0 	|| testScore > 100);
-	printf("The test score you input is %d.", testScore);
-	/*--cap10-end----------------------*/
-
+	} while (testScore < 0 || testScore > 100);
+	printf("The test score you input is %d.\n", testScore);
 	return 0;
+}
+
+int sum(int sigInputMin, int sigInputMax){
+	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
+	return sigOutput;
 }
