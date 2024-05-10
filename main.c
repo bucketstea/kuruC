@@ -15,6 +15,7 @@ int tableKuku(void);
 int whenExceed(void);
 int testScoreCheck(void);
 int sum(int, int);
+int countfunc(void);
 
 /*********************
 ***main関数***********
@@ -65,14 +66,10 @@ int main(void){
 	printf("Enter a real number may include a decimal:");
 	scanf("%lf", &input2);
 	printf("output2 is %.2f\n", input2);
-
-	printf("This executes a sigma calculation. Enter the Min and Max values separated by a space:");
-	scanf("%d%d", &sigInputMin, &sigInputMax);
-	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
-	printf("The sum of %d to %d is %d!\n", sigInputMin, sigInputMax, sigOutput);
 	
 	/*--cap6-end-----------------------*/
-	/*--cap7---------------------------*/
+
+	/*--cap7---------------------------
 	printf("------------cap7----------\n");
 	calPrice();
 	
@@ -92,18 +89,18 @@ int main(void){
 	}
 
 	/*--cap7-end-----------------------*/
-	/*--cap8---------------------------*/
+	/*--cap8---------------------------
 	printf("------------cap8----------\n");
 	whois();
 	japaneseMonthName();
 
 	/*--cap8-end-----------------------*/
-	/*--cap9---------------------------*/
+	/*--cap9---------------------------
 	printf("------------cap9----------\n");
 	tableKuku();
 
 	/*--cap9-end-----------------------*/
-	/*--cap10--------------------------*/
+	/*--cap10--------------------------
 	printf("------------cap10---------\n");
 	whenExceed();
 	testScoreCheck();
@@ -116,10 +113,43 @@ int main(void){
 	printf("The sum of %d to %d is %d!\n", sigInputMin, sigInputMax, sigOutput);
 
 	/*--cap11-end----------------------*/
+	/*--cap12--------------------------*/
+	countfunc();
+	countfunc();
+	countfunc();
+	
+	/*--cap12-end----------------------*/
+	/*--cap13--------------------------*/
+	int array[10];
+	int i;
+	
+	for(i = 0; i < 10; i++){
+		printf("Enter a %dth number :", i+1);
+		scanf("%d", &array[i]);
+	}
+
+	printf("arraysize is %d\n", sizeof(array));
+	printf("elementsize is %d\n", sizeof(array[2]));
+
+	for(i = 0; i < sizeof(array) / sizeof(array[0]); i++){
+		printf("array[%d] = %d\n", i, array[sizeof(array) / sizeof(array[0]) -1 - i]);
+	}
+	
+	/*--cap13-end----------------------*/
 
 	return 0;
 }
 
+/*end func main***************************************************************************/
+
+int countfunc(void){
+	count++;
+	printf("%d\n", count);
+	return 0;
+}
+/******************
+ * 割引計算*********
+******************/
 int calPrice(void) {
 	printf(" Enter a list price:");
 	scanf("%d", &listPrice);
@@ -148,6 +178,9 @@ int calPrice(void) {
 	return 0;
 }
 
+/******************
+ * オリンピック開催
+******************/
 int olympic(int inputAD) {
 	if (inputAD % 4 == 0) {
 		heldOlympic = 1;
@@ -161,6 +194,9 @@ int olympic(int inputAD) {
 	return heldOlympic;
 }
 
+/*****************
+ * ドラえもんキャラ
+******************/
 int whois(void) {
 	printf("Enter a Nomber:");
 	scanf("%d", &inputNo);
@@ -185,6 +221,9 @@ int whois(void) {
 	return 0;
 }
 
+/*****************
+ * 月の和名
+******************/
 int japaneseMonthName(void){
 	printf("Enter a Month:");
 	scanf("%d", &inputMM);
@@ -233,6 +272,9 @@ int japaneseMonthName(void){
 	return 0;
 }
 
+/******************
+ * 九九表
+*******************/
 int tableKuku(void) {
 	for (i = 1; i <= 9; i++) {
 		for (j = 1; j <= 9; j++) {
@@ -243,6 +285,9 @@ int tableKuku(void) {
 	return 0;
 }
 
+/******************************
+ * 1000000円を超えるまで累乗する
+*******************************/
 int whenExceed(void) {
 	while (money < 1000000) {
 		printf("%d yen\n", money);
@@ -253,6 +298,9 @@ int whenExceed(void) {
 	return 0;
 }
 
+/*********************************
+ * 点数入力バリデーションチェック
+**********************************/
 int testScoreCheck(void){
 	do {
 		if (testScore < 0 || testScore > 100) {
@@ -265,6 +313,9 @@ int testScoreCheck(void){
 	return 0;
 }
 
+/****************
+ * シグマ計算
+*****************/
 int sum(int sigInputMin, int sigInputMax){
 	sigOutput = (sigInputMin + sigInputMax) * (sigInputMax - sigInputMin + 1) / 2;
 	return sigOutput;
