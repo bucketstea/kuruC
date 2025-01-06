@@ -17,6 +17,8 @@ int testScoreCheck(void);
 int sum(int, int);
 int countfunc(void);
 
+//test
+
 /*********************
 ***main関数***********
 *********************/
